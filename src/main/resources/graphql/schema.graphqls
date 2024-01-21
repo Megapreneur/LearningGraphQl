@@ -1,0 +1,15 @@
+type User{
+    userId: ID!
+    name: String!
+    email: String!
+    age: Int!
+    gender: Gender!
+}
+enum Gender {
+    MALE
+    FEMALE
+}
+type Query {
+    getAllUsers: [User]
+    findUserByEmail(email: String!): User
+}
